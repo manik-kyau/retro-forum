@@ -10,13 +10,20 @@ const displayAllData = (allPost) =>{
     const postContainer = document.getElementById('post-container');
     allPost.forEach((post) =>{
         // console.log(post);
+        let activateBadge ='';
+        if(post.isActive){
+            activateBadge = `<span class="indicator-item badge bg-green-600"></span>`;
+        }
+        else{
+            activateBadge = `<span class="indicator-item badge bg-red-600"></span>`;
+        }
         const postCard = document.createElement('div');
         postCard.innerHTML = `
         <div class="flex flex-col lg:flex-row gap-4 lg:gap-6 border p-5 lg:p-8 rounded-3xl">
         <div>
             <!-- --------- -->
             <div class="indicator">
-                <span class="indicator-item badge badge-secondary"></span> 
+                ${activateBadge} 
                 <div class="grid w-[72px] h-[72px] bg-base-300 place-items-center rounded-2xl"><img class="rounded-2xl" src="${post.image}" alt=""></div>
               </div>
         </div>
@@ -92,17 +99,20 @@ const displayAllData = (allPost) =>{
 
 }
 loadAllData()
-
+// Work of letest Posts section
 const loadLetestPosts = async() =>{
     const response = await fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts');
     const data = await response.json();
     displayLetestPosts(data)
 }
 const displayLetestPosts = (letestPosts) =>{
-    
     const letestPostContainer = document.getElementById('letestPost-container');
 
     letestPosts.forEach((ltstPost) =>{
+    let desigNation = '';
+    let postedDate = '';
+    desigNation = ltstPost.author.designation ? ltstPost.author.designation : "Unknown";
+    postedDate = ltstPost.author.posted_date ? ltstPost.author.posted_date : "No publish date";
     const letestPostCard = document.createElement('div');
     letestPostCard.innerHTML = `
     <div class="bg-base-100 shadow-xl p-5 rounded-3xl">
@@ -110,7 +120,7 @@ const displayLetestPosts = (letestPosts) =>{
         <div class="mt-5 space-y-4">
             <div class="flex gap-2">
                 <img src="icon/date.png" alt="">
-                <h4 class="text-base font-normal text-[#12132d99]">${ltstPost?.author?.posted_date}</h4>
+                <h4 class="text-base font-normal text-[#12132d99]">${postedDate}</h4>
             </div>
           <h2 class="text-lg font-extrabold text-[#12132D]">${ltstPost.title}</h2>
           <p class="text-base font-normal text-[#12132d99]">${ltstPost.description.slice(0,85)}</p>
@@ -118,7 +128,7 @@ const displayLetestPosts = (letestPosts) =>{
             <img class="h-12 w-12 rounded-full" src="${ltstPost.profile_image}" alt="">
             <div>
                 <h4 class="text-base font-bold text-[#12132D]">${ltstPost?.author?.name}</h4>
-                <p class="text-sm font-normal text-[#12132d99]">${ltstPost?.author?.designation}</p>
+                <p class="text-sm font-normal text-[#12132d99]">${desigNation}</p>
             </div>
           </div>
         </div>
