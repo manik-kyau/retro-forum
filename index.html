@@ -30,49 +30,51 @@
 </head>
 <body>
     <header class="max-w-[1180px] mx-auto my-12 px-5 lg-px-0">
-        <!-- Navbar -->
+        <!-- navbar -->
         <nav class="mb-12">
-            <div class="navbar bg-base-100">
+            <div class="navbar flex justify-between px-0">
                 <div class="navbar-start">
                   <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                    </div>
+                    <button tabindex="0" role="button" class="lg:hidden mr-6">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </button>
                     <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                      <li><a>Item 1</a></li>
-                      <li><a>Item 2</a></li>
-                      <li><a>Item 3</a></li>
-                      <li><a>Item 4</a></li>
+                        <li><a>Item 1</a></li>
+                        <li><a>Item 2</a></li>
+                        <li><a>Item 3</a></li>
+                        <li><a>Item 4</a></li>
                     </ul>
                   </div>
-                  <a class="btn btn-ghost text-xl"><img src="images/logo.png" alt=""></a>
+                  <a class=""><img src="images/logo.png" alt=""></a>
                 </div>
-                <div class="navbar-center hidden lg:flex">
-                  <ul class="menu menu-horizontal px-1">
-                    <li class="border rounded-full"><a><i class="fa-solid fa-house"></i></a></li>
-                    <li class="border rounded-full"><a><img src="icon/edit.png" alt=""></a></li>
-                    <li class="border rounded-full"><a><img src="icon/add.png" alt=""></a></li>
-                    <li class="border rounded-full"><a><img src="icon/flag.png" alt=""></a></li>
-                  </ul>
+                <div class="text-end">
+                    <div class="flex justify-end">
+                        <ul class="flex gap-3 hidden lg:flex">
+                            <li class="border rounded-full p-1 bg-gray-100"><a><abbr title="home"><img class="w-7 h-7" src="icon/home.png" alt=""></abbr></i></a></li>
+                            <li class="border rounded-full p-1 bg-gray-100"><a><img class="w-7 h-7" src="icon/edit.png" alt=""></a></li>
+                            <li class="border rounded-full p-1 bg-gray-100"><a><img class="w-7 h-7" src="icon/add.png" alt=""></a></li>
+                            <li class="border rounded-full p-1 bg-gray-100"><a><img class="w-7 h-7" src="icon/flag.png" alt=""></a></li>
+                        </ul>
+                      </div>
+                      <div class="min-w-[150px]">
+                          <button class="w[150px] text-xl font-bold text-white bg-[#797DFC] px-6 pt-1 lg:pt-2 pb-2 lg:pb-3 rounded-full">Sign In</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="navbar-end">
-                  <button class="text-xl font-bold text-white bg-[#797DFC] px-6 py-2 rounded-full">Sign In</button>
-                </div>
-              </div>
         </nav>
 
         <!-- Banner Section -->
         <div class="lg:h-[550px] flex justify-center items-center bg-[url('images/bgbanner.png')] bg-no-repeat bg-center bg-cover bg-[#12132D] rounded-[32px] p-[50px] lg:p-[100px] mb-14">
             <div class="flex flex-col lg:flex-row gap-10 lg:gap-32 justify-between items-center">
-                <div class=" space-y-7 lg:space-y-12">
+                <div class="w-full lg:w-[500px] space-y-7 lg:space-y-12">
                     <h1 class=" text-4xl lg:text-6xl font-extrabold text-white ">Welcome to the 
                         <br> 
                         <span>ReTro</span> Forum</h1>
                         <p class="text-lg lg:text-xl font-medium text-[#ffffffcc] ">Share your favorite opinion and win and wp <br> forum coffee mug!</p>
-                        <div class="lg:w-[337px] bg-white rounded-full px-4 py-1">
+                        <div class="w-full lg:w-[337px] flex justify-between bg-white rounded-full pl-4 pr-1 py-1">
                             <!-- ------------- -->
                             <input id="input-field" class="outline-none" type="text" placeholder="Search here anything">
-                            <button class="text-xl font-bold text-white bg-[#797DFC] px-6  rounded-full">Search</button>
+                            <button class="text-base lg:text-xl font-bold text-white bg-[#797DFC] px-6 pt-2 pb-3 rounded-full ">Search</button>
                         </div>
                 </div>
                 <div class="w-full lg:w-[350px] bg-white p-8 lg:p-12 space-y-6 rounded-[32px]">
@@ -144,7 +146,7 @@
                                 </div>
                                 <div>
                                     <!-- ------------ -->
-                                    <button>
+                                    <button class="button">
                                         <img src="icon/message.png" alt="">
                                     </button>
                                 </div>
@@ -153,31 +155,35 @@
                     </div>
                 </div>
                 <!-- items div end -->
-
-                <div class="w-full lg:w-[370px] bg-gray-100 p-4 rounded-3xl">
-                    <!-- head -->
-                    <div class="flex justify-between">
-                        <h1 class="text-xl font-bold text-[#12132D]">Title</h1>
-                        <div class=" flex gap-1">
-                            <img src="icon/tik.png" alt="">
-                            <!-- ----------- -->
-                            <p class="w-[120px] text-base font-normal text-[#12132d99]">Mark as read (4)</p>
+                <div>
+                    <div class="w-full lg:w-[370px] bg-gray-100 p-4 rounded-3xl">
+                        <!-- head -->
+                        <div class="flex justify-between">
+                            <h1 class="text-xl font-bold text-[#12132D]">Title</h1>
+                            <div class=" flex gap-1">
+                                <img src="icon/tik.png" alt="">
+                                <!-- ----------- -->
+                                <p class="w-[120px] text-base font-normal text-[#12132d99]">Mark as read (4)</p>
+                            </div>
                         </div>
-                    </div>
-                    <!-- -------------- -->
-                    <div id="title-container" class="flex justify-between bg-white rounded-2xl my-4 p-4">
-                        <h2 class="text-base font-bold text-[#12132D]">10 Kids Unaware of Their <br> Halloween Costume</h2>
-                        <div class="flex items-center gap-1">
-                            <img class="h-[18px] w-7" src="icon/eye.png" alt="">
-                            <p class="text-base font-normal text-[#12132d99]">1,568</p>
+                        <!-- -------------- -->
+                        
+                        <div id="title-container" class="flex justify-between bg-white rounded-2xl my-4 p-4">
+                            <h2 class="text-base font-bold text-[#12132D]">10 Kids Unaware of Their <br> Halloween Costume</h2>
+                            <div class="flex items-center gap-1">
+                                <img class="h-[18px] w-7" src="icon/eye.png" alt="">
+                                <p class="text-base font-normal text-[#12132d99]">1,568</p>
+                            </div>
                         </div>
+                        
+    
                     </div>
-
                 </div>
+
             </div>
         </section>
         <!-- Forum section -->
-        <section>
+        <section class="my-14">
             <div class="lg:h-[400px] flex flex-col lg:flex-row lg:items-end gap-6 lg:gap-10 bg-[#12132D] rounded-[32px] p-8 lg:p-0 lg:pl-[90px] lg:pr-8">
                 <div class="h-full flex justify-center items-center">
                     <div class="space-y-5 lg:space-y-8">
@@ -191,6 +197,72 @@
                 <div>
                     <img class="h-[330px] w-[560px]" src="images/joinforum.png" alt="">
                 </div>
+            </div>
+        </section>
+        <!-- Letest Post section -->
+        <section class="my-12">
+            <div class="space-y-5 my-12">
+                <h1 class="text-3xl lg:text-[40px] text-[ #12132D] font-extrabold text-center">Latest Posts</h1>
+                <p class="w-full lg:w-[700px] text-center mx-auto text-base lg:text-lg font-normal text-[#12132d99]">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+            </div>
+            <!-- --------------------- -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- card-1 -->
+                <div class="card bg-base-100 shadow-xl p-5">
+                        <figure><img class="rounded-[20px]" src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                    <div class="mt-5 space-y-4">
+                        <div class="flex gap-2">
+                            <img src="icon/date.png" alt="">
+                            <h4 class="text-base font-normal text-[#12132d99]">No publish date</h4>
+                        </div>
+                      <h2 class="text-lg font-extrabold text-[#12132D]">What will a mars habitat force that impact in our daily life!!!</h2>
+                      <p class="text-base font-normal text-[#12132d99]">Yes, you can run unit tests and view the results directly within the app.</p>
+                      <div class="card-actions">
+                        <img src="images/man.png" alt="">
+                        <div>
+                            <h4 class="text-base font-bold text-[#12132D]">Cameron Williamson</h4>
+                            <p class="text-sm font-normal text-[#12132d99]">Unknown</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <!-- card-2 -->
+                <div class="card bg-base-100 shadow-xl p-5">
+                    <figure><img class="rounded-[20px]" src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                <div class="mt-5 space-y-4">
+                    <div class="flex gap-2">
+                        <img src="icon/date.png" alt="">
+                        <h4 class="text-base font-normal text-[#12132d99]">No publish date</h4>
+                    </div>
+                  <h2 class="text-lg font-extrabold text-[#12132D]">What will a mars habitat force that impact in our daily life!!!</h2>
+                  <p class="text-base font-normal text-[#12132d99]">Yes, you can run unit tests and view the results directly within the app.</p>
+                  <div class="card-actions">
+                    <img src="images/man.png" alt="">
+                    <div>
+                        <h4 class="text-base font-bold text-[#12132D]">Cameron Williamson</h4>
+                        <p class="text-sm font-normal text-[#12132d99]">Unknown</p>
+                    </div>
+                  </div>
+                </div>
+            </div><!-- card-3 -->
+            <div class="card bg-base-100 shadow-xl p-5">
+                    <figure><img class="rounded-[20px]" src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                <div class="mt-5 space-y-4">
+                    <div class="flex gap-2">
+                        <img src="icon/date.png" alt="">
+                        <h4 class="text-base font-normal text-[#12132d99]">No publish date</h4>
+                    </div>
+                  <h2 class="text-lg font-extrabold text-[#12132D]">What will a mars habitat force that impact in our daily life!!!</h2>
+                  <p class="text-base font-normal text-[#12132d99]">Yes, you can run unit tests and view the results directly within the app.</p>
+                  <div class="card-actions">
+                    <img src="images/man.png" alt="">
+                    <div>
+                        <h4 class="text-base font-bold text-[#12132D]">Cameron Williamson</h4>
+                        <p class="text-sm font-normal text-[#12132d99]">Unknown</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
             </div>
         </section>
 
@@ -207,11 +279,6 @@
             </div>
             <p class="text-base text-center font-light text-[#12132d80] mt-12">2017, All Rights Reserved.</p>
         </div>
-        <!-- #ffffffcc  ====== 255, 255, 255, 0.8-->
-        <!-- #12132d00  ====== 18 19 45 0.0-->
-        <!-- #12132d99  ====== 18 19 45 0.6-->
-        <!-- #12132dcc  ====== 18 19 45 0.8-->
-        <!-- #12132D  ====== 18 19 45 -->
     </footer>
     <script src="script.js"></script>
 </body>
