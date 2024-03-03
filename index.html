@@ -64,7 +64,7 @@
         </nav>
 
         <!-- Banner Section -->
-        <div class="lg:h-[550px] flex justify-center items-center bg-[url('images/bgbanner.png')] bg-no-repeat bg-center bg-cover bg-[#12132D] rounded-[32px] p-[50px] lg:p-[100px] mb-14">
+        <div class="lg:h-[550px] flex justify-center items-center bg-[url('images/bgbanner.png')] bg-no-repeat bg-center bg-cover bg-[#12132D] rounded-[32px] p-12 lg:p-[100px] mb-14">
             <div class="flex flex-col lg:flex-row gap-10 lg:gap-32 justify-between items-center">
                 <div class="w-full lg:w-[500px] space-y-7 lg:space-y-12">
                     <h1 class=" text-4xl lg:text-6xl font-extrabold text-white ">Welcome to the 
@@ -110,49 +110,8 @@
             <!-- ----------------------- -->
             <div class="flex flex-col lg:flex-row gap-6">
                 <!-- items div -->
-                <div class="space-y-6">
-                    <!-- items-1 -->
-                    <div class="flex gap-4 lg:gap-6 border p-5 lg:p-8 rounded-3xl">
-                        <div>
-                            <!-- --------- -->
-                            <div class="indicator">
-                                <span class="indicator-item badge badge-secondary"></span> 
-                                <div class="grid w-[72px] h-[72px] bg-base-300 place-items-center rounded-2xl">content</div>
-                              </div>
-                        </div>
-                        <div class="">
-                            <div class="flex gap-5">
-                                <h4 class="text-sm font-medium text-[#12132dcc]"># Music</h4>
-                                <h4 class="text-sm font-medium text-[#12132dcc]">Author : Awlad Hossain</h4>
-                            </div>
-                            <div class="mt-2 lg:mt-3">
-                                <h2 class="text-lg lg:text-xl font-bold text-[#12132D]">10 Kids Unaware of Their Halloween Costume</h2>
-                                <p class="text-sm lg:text-base font-normal text-[#12132d99] border-dashed border-b-2 py-3 lg:py-4">It’s one thing to subject yourself to ha Halloween costume mishap because, hey that’s your prerogative</p>
-                            </div>
-                            <div class="flex justify-between mt-3 lg:mt-5">
-                                <div class="flex gap-5 lg:gap-8">
-                                    <div class="flex items-center gap-1">
-                                        <img class="h-5 w-5" src="icon/sms.png" alt="">
-                                        <p class="text-base font-normal text-[#12132d99]">560</p>
-                                    </div>
-                                    <div class="flex items-center gap-1">
-                                        <img class="h-5 w-6" src="icon/eye.png" alt="">
-                                        <p class="text-base font-normal text-[#12132d99]">1,568</p>
-                                    </div>
-                                    <div class="flex items-center gap-1">
-                                        <img class="h-5 w-5" src="icon/view.png" alt="">
-                                        <p class="text-base font-normal text-[#12132d99]">5 min</p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <!-- ------------ -->
-                                    <button class="button">
-                                        <img src="icon/message.png" alt="">
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div id="post-container" class="space-y-6">
+
                 </div>
                 <!-- items div end -->
                 <div>
@@ -163,20 +122,21 @@
                             <div class=" flex gap-1">
                                 <img src="icon/tik.png" alt="">
                                 <!-- ----------- -->
-                                <p class="w-[120px] text-base font-normal text-[#12132d99]">Mark as read (4)</p>
+                                <p class="w-[120px] text-base font-normal text-[#12132d99]">Mark as read (<span id="card-count">0</span>)</p>
                             </div>
                         </div>
                         <!-- -------------- -->
                         
-                        <div id="title-container" class="flex justify-between bg-white rounded-2xl my-4 p-4">
-                            <h2 class="text-base font-bold text-[#12132D]">10 Kids Unaware of Their <br> Halloween Costume</h2>
+                        <div id="title-container" >
+                            <div class="flex justify-between bg-white rounded-2xl my-4 p-4">
+                                <h2 class="text-base font-bold text-[#12132D]">10 Kids Unaware of Their <br> Halloween Costume</h2>
                             <div class="flex items-center gap-1">
                                 <img class="h-[18px] w-7" src="icon/eye.png" alt="">
                                 <p class="text-base font-normal text-[#12132d99]">1,568</p>
                             </div>
+                            </div>
                         </div>
-                        
-    
+
                     </div>
                 </div>
 
@@ -206,63 +166,8 @@
                 <p class="w-full lg:w-[700px] text-center mx-auto text-base lg:text-lg font-normal text-[#12132d99]">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
             </div>
             <!-- --------------------- -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <!-- card-1 -->
-                <div class="card bg-base-100 shadow-xl p-5">
-                        <figure><img class="rounded-[20px]" src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-                    <div class="mt-5 space-y-4">
-                        <div class="flex gap-2">
-                            <img src="icon/date.png" alt="">
-                            <h4 class="text-base font-normal text-[#12132d99]">No publish date</h4>
-                        </div>
-                      <h2 class="text-lg font-extrabold text-[#12132D]">What will a mars habitat force that impact in our daily life!!!</h2>
-                      <p class="text-base font-normal text-[#12132d99]">Yes, you can run unit tests and view the results directly within the app.</p>
-                      <div class="card-actions">
-                        <img src="images/man.png" alt="">
-                        <div>
-                            <h4 class="text-base font-bold text-[#12132D]">Cameron Williamson</h4>
-                            <p class="text-sm font-normal text-[#12132d99]">Unknown</p>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-                <!-- card-2 -->
-                <div class="card bg-base-100 shadow-xl p-5">
-                    <figure><img class="rounded-[20px]" src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-                <div class="mt-5 space-y-4">
-                    <div class="flex gap-2">
-                        <img src="icon/date.png" alt="">
-                        <h4 class="text-base font-normal text-[#12132d99]">No publish date</h4>
-                    </div>
-                  <h2 class="text-lg font-extrabold text-[#12132D]">What will a mars habitat force that impact in our daily life!!!</h2>
-                  <p class="text-base font-normal text-[#12132d99]">Yes, you can run unit tests and view the results directly within the app.</p>
-                  <div class="card-actions">
-                    <img src="images/man.png" alt="">
-                    <div>
-                        <h4 class="text-base font-bold text-[#12132D]">Cameron Williamson</h4>
-                        <p class="text-sm font-normal text-[#12132d99]">Unknown</p>
-                    </div>
-                  </div>
-                </div>
-            </div><!-- card-3 -->
-            <div class="card bg-base-100 shadow-xl p-5">
-                    <figure><img class="rounded-[20px]" src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-                <div class="mt-5 space-y-4">
-                    <div class="flex gap-2">
-                        <img src="icon/date.png" alt="">
-                        <h4 class="text-base font-normal text-[#12132d99]">No publish date</h4>
-                    </div>
-                  <h2 class="text-lg font-extrabold text-[#12132D]">What will a mars habitat force that impact in our daily life!!!</h2>
-                  <p class="text-base font-normal text-[#12132d99]">Yes, you can run unit tests and view the results directly within the app.</p>
-                  <div class="card-actions">
-                    <img src="images/man.png" alt="">
-                    <div>
-                        <h4 class="text-base font-bold text-[#12132D]">Cameron Williamson</h4>
-                        <p class="text-sm font-normal text-[#12132d99]">Unknown</p>
-                    </div>
-                  </div>
-                </div>
-            </div>
+            <div id="letestPost-container" class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                
             </div>
         </section>
 
