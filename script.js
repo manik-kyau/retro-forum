@@ -1,13 +1,15 @@
-const loadAllData = async() =>{
-    const response = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts');
+const loadAllData = async(inputText) =>{
+    const response = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${inputText}`);
     const data = await response.json();
     const allPost = data.posts
-    // console.log(post)
+    // console.log(allPost)
     displayAllData(allPost);
 }
+
 const displayAllData = (allPost) =>{
     // console.log(allPost);
     const postContainer = document.getElementById('post-container');
+    postContainer.innerHTML = '';
     allPost.forEach((post) =>{
         // console.log(post);
         let activateBadge ='';
@@ -67,8 +69,8 @@ const displayAllData = (allPost) =>{
     </div>
         `;
         postContainer.appendChild(postCard);
-        
     })
+    toggleLoadingSpinner(false);
     // text Inject niye kaj
     const postButton = document.getElementsByClassName('post-button');
     let count = 0;
@@ -84,21 +86,41 @@ const displayAllData = (allPost) =>{
             const div = document.createElement('div');
             div.innerHTML = `
             <div class="flex justify-between bg-white rounded-2xl my-4 p-4">
-                                <h2 class="text-base font-bold text-[#12132D]">10 Kids Unaware of Their <br> Halloween Costume</h2>
-                            <div class="flex items-center gap-1">
-                                <img class="h-[18px] w-7" src="icon/eye.png" alt="">
-                                <p class="text-base font-normal text-[#12132d99]">1,568</p>
-                            </div>
-                            </div>
+                <h2 class="text-base font-bold text-[#12132D]">10 Kids Unaware of Their <br> Halloween Costume</h2>
+                <div class="flex items-center gap-1">
+                    <img class="h-[18px] w-7" src="icon/eye.png" alt="">
+                    <p class="text-base font-normal text-[#12132d99]">1,568</p>
+                </div>
+            </div>
             `;
-
             titleContainer.appendChild(div);
-
         })
     }
-
 }
-loadAllData()
+
+// Handle search Option
+const handleSearch = () =>{
+    toggleLoadingSpinner(true)
+    const inputField = document.getElementById('input-field');
+    const inputText = inputField.value;
+    // if(inputText.toUpperCase() || inputText.toLowerCase)
+    loadAllData(inputText);
+};
+
+// Loading Spinner add 
+const toggleLoadingSpinner = (isLoading) =>{
+    const loadingSpinner = document.getElementById('loading-spinner');
+    if(isLoading === true){
+        loadingSpinner.classList.remove('hidden');
+    }
+    else{
+        loadingSpinner.classList.add('hidden');
+    }
+}
+
+loadAllData('comedy');
+
+
 // Work of letest Posts section
 const loadLetestPosts = async() =>{
     const response = await fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts');
